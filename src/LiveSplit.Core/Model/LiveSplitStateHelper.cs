@@ -171,40 +171,7 @@ public static class LiveSplitStateHelper
     /// <returns>Returns the chosen color.</returns>
     public static Color? GetSplitColor(LiveSplitState state, TimeSpan? timeDifference, int splitNumber, bool showSegmentDeltas, bool showBestSegments, string comparison, TimingMethod method)
     {
-        Color? splitColor = null;
-        if (splitNumber < 0)
-        {
-            return splitColor;
-        }
-
-        if (timeDifference != null)
-        {
-            if (timeDifference <= TimeSpan.Zero)
-            {
-                splitColor = state.LayoutSettings.AheadGainingTimeColor;
-                TimeSpan? lastDelta = GetLastDelta(state, splitNumber - 1, comparison, method);
-                if (showSegmentDeltas && splitNumber > 0 && lastDelta != null && timeDifference > lastDelta)
-                {
-                    splitColor = state.LayoutSettings.AheadLosingTimeColor;
-                }
-            }
-            else
-            {
-                splitColor = state.LayoutSettings.BehindLosingTimeColor;
-                TimeSpan? lastDelta = GetLastDelta(state, splitNumber - 1, comparison, method);
-                if (showSegmentDeltas && splitNumber > 0 && lastDelta != null && timeDifference < lastDelta)
-                {
-                    splitColor = state.LayoutSettings.BehindGainingTimeColor;
-                }
-            }
-        }
-
-        if (showBestSegments && state.LayoutSettings.ShowBestSegments && CheckBestSegment(state, splitNumber, method))
-        {
-            splitColor = GetBestSegmentColor(state);
-        }
-
-        return splitColor;
+        return RandomDeltaColorHelper.GetColor(splitNumber);
     }
 
     /// <summary>

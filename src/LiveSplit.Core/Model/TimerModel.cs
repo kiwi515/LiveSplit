@@ -47,6 +47,8 @@ public class TimerModel : ITimerModel
             CurrentState.Run.AttemptCount++;
             CurrentState.Run.HasChanged = true;
 
+            RandomDeltaColorHelper.Initialize();
+
             OnStart?.Invoke(this, null);
         }
     }
