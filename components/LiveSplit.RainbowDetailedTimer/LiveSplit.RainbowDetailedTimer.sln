@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F3CA0C2B-6BAF-4173-B3BF-B51D435EB36A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveSplit.RainbowDetailedTimer", "src\LiveSplit.RainbowDetailedTimer\LiveSplit.RainbowDetailedTimer.csproj", "{0D29458A-1C6C-43C4-932A-343A9CDEB608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveSplit.Core", "..\..\src\LiveSplit.Core\LiveSplit.Core.csproj", "{1B9D7C18-C194-8812-0D2B-5B9E54B9EC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateManager", "..\..\src\UpdateManager\UpdateManager.csproj", "{02394A5D-30BF-901F-96AB-3BCAB63CD7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFontDialog", "..\..\lib\CustomFontDialog\CustomFontDialog\CustomFontDialog.csproj", "{77C1D7FC-20D6-C890-22FF-F9B07D0719A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveSplit.RainbowTimer", "..\LiveSplit.RainbowTimer\src\LiveSplit.RainbowTimer\LiveSplit.RainbowTimer.csproj", "{98CBA2BE-6600-A686-951A-6C9DEE8CBDA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D29458A-1C6C-43C4-932A-343A9CDEB608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D29458A-1C6C-43C4-932A-343A9CDEB608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D29458A-1C6C-43C4-932A-343A9CDEB608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D29458A-1C6C-43C4-932A-343A9CDEB608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9D7C18-C194-8812-0D2B-5B9E54B9EC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9D7C18-C194-8812-0D2B-5B9E54B9EC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9D7C18-C194-8812-0D2B-5B9E54B9EC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9D7C18-C194-8812-0D2B-5B9E54B9EC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02394A5D-30BF-901F-96AB-3BCAB63CD7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02394A5D-30BF-901F-96AB-3BCAB63CD7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02394A5D-30BF-901F-96AB-3BCAB63CD7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02394A5D-30BF-901F-96AB-3BCAB63CD7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C1D7FC-20D6-C890-22FF-F9B07D0719A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C1D7FC-20D6-C890-22FF-F9B07D0719A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C1D7FC-20D6-C890-22FF-F9B07D0719A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C1D7FC-20D6-C890-22FF-F9B07D0719A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CBA2BE-6600-A686-951A-6C9DEE8CBDA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CBA2BE-6600-A686-951A-6C9DEE8CBDA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CBA2BE-6600-A686-951A-6C9DEE8CBDA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CBA2BE-6600-A686-951A-6C9DEE8CBDA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D29458A-1C6C-43C4-932A-343A9CDEB608} = {F3CA0C2B-6BAF-4173-B3BF-B51D435EB36A}
+	EndGlobalSection
+EndGlobal
