@@ -293,6 +293,8 @@ public class RainbowTimer : IComponent
     {
         Cache.Restart();
 
+        bool isPersonalBest = false;
+
         TimingMethod timingMethod = state.CurrentTimingMethod;
         if (Settings.TimingMethod == "Real Time")
         {
@@ -345,10 +347,8 @@ public class RainbowTimer : IComponent
         {
             if (state.Run.Last().Comparisons[state.CurrentComparison][timingMethod] == null || state.CurrentTime[timingMethod] < state.Run.Last().Comparisons[state.CurrentComparison][timingMethod])
             {
-                // Logic taken from LiveSplitStateHelper.GetBestSegmentColor
-                int hue = (int)DateTime.Now.TimeOfDay.TotalMilliseconds / 100 % 36 * 10;
-                Color rainbowColor = ColorExtensions.FromHSV(hue, 1, 1);
-                TimerColor = Color.FromArgb(((rainbowColor.R * 2) + (255 * 1)) / 3, ((rainbowColor.G * 2) + (255 * 1)) / 3, ((rainbowColor.B * 2) + (255 * 1)) / 3);
+                isPersonalBest = true;
+                TimerColor = state.LayoutSettings.PersonalBestColor;
             }
             else
             {
@@ -378,6 +378,22 @@ public class RainbowTimer : IComponent
         {
             BigTextLabel.ForeColor = TimerColor;
             SmallTextLabel.ForeColor = TimerColor;
+        }
+
+        if (isPersonalBest)
+        {
+            // Logic taken from LiveSplitStateHelper.GetBestSegmentColor
+            int hue = (int)DateTime.Now.TimeOfDay.TotalMilliseconds / 100 % 36 * 10;
+            Color random = ColorExtensions.FromHSV(hue, 1, 1);
+
+            Color rainbow = Color.FromArgb(
+                ((random.R * 2) + (255 * 1)) / 3,
+                ((random.G * 2) + (255 * 1)) / 3,
+                ((random.B * 2) + (255 * 1)) / 3
+            );
+
+            BigTextLabel.ForeColor = rainbow;
+            SmallTextLabel.ForeColor = rainbow;
         }
 
         Cache["TimerText"] = BigTextLabel.Text + SmallTextLabel.Text;
