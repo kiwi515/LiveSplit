@@ -43,6 +43,8 @@ public class RainbowTimer : IComponent
     public float PaddingBottom => 0f;
     public float PaddingRight => 7f;
 
+    public bool DisableRainbow = false;
+
     public IDictionary<string, Action> ContextMenuControls => null;
 
     public RainbowTimer()
@@ -380,7 +382,7 @@ public class RainbowTimer : IComponent
             SmallTextLabel.ForeColor = TimerColor;
         }
 
-        if (isPersonalBest)
+        if (isPersonalBest && !DisableRainbow)
         {
             // Logic taken from LiveSplitStateHelper.GetBestSegmentColor
             int hue = (int)DateTime.Now.TimeOfDay.TotalMilliseconds / 100 % 36 * 10;

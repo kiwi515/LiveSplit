@@ -20,6 +20,7 @@ public partial class RainbowDetailedTimerSettings : UserControl
     public bool TimerShowGradient { get; set; }
     public bool OverrideTimerColors { get; set; }
     public bool SegmentTimerShowGradient { get; set; }
+    public bool SegmentTimerDisableRainbow { get; set; }
     public bool ShowSplitName { get; set; }
 
     public float IconSize { get; set; }
@@ -114,6 +115,7 @@ public partial class RainbowDetailedTimerSettings : UserControl
         TimerShowGradient = true;
         OverrideTimerColors = false;
         SegmentTimerShowGradient = true;
+        SegmentTimerDisableRainbow = false;
         ShowSplitName = false;
 
         TimerColor = Color.FromArgb(170, 170, 170);
@@ -148,6 +150,7 @@ public partial class RainbowDetailedTimerSettings : UserControl
         TimingMethod = "Current Timing Method";
 
         chkShowGradientSegmentTimer.DataBindings.Add("Checked", this, "SegmentTimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
+        chkDisableRainbowSegmentTimer.DataBindings.Add("Checked", this, "SegmentTimerDisableRainbow", false, DataSourceUpdateMode.OnPropertyChanged);
         chkShowGradientTimer.DataBindings.Add("Checked", this, "TimerShowGradient", false, DataSourceUpdateMode.OnPropertyChanged);
         chkOverrideTimerColors.DataBindings.Add("Checked", this, "OverrideTimerColors", false, DataSourceUpdateMode.OnPropertyChanged);
         chkSplitName.DataBindings.Add("Checked", this, "ShowSplitName", false, DataSourceUpdateMode.OnPropertyChanged);

@@ -145,6 +145,7 @@ public class RainbowDetailedTimer : IComponent
         SegmentTimer.Settings.DigitsFormat = Settings.SegmentDigitsFormat;
         SegmentTimer.Settings.Accuracy = Settings.SegmentAccuracy;
         SegmentTimer.Settings.DecimalsSize = Settings.SegmentTimerDecimalsSize;
+        SegmentTimer.DisableRainbow = Settings.SegmentTimerDisableRainbow;
 
         if (state.CurrentSplitIndex >= 0)
         {
